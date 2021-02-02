@@ -23,7 +23,7 @@ body {
   font-weight: 500;
   margin: 0;
   padding: 0;
-  background-color: var(--light-gray);
+  background-color: var(--light-grayish-blue);
 }
 
 .container {
