@@ -119,6 +119,7 @@ body {
 
   body{
     box-sizing: border-box;
+    margin-top: 13%;
   }
   .container {
     grid-template-columns: repeat(4, 1fr);
