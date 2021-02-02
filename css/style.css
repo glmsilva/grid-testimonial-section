@@ -20,4 +20,136 @@ body {
   font-size: 13px;
   font-family: 'Barlow Semi Condensed', sans-serif;
   box-sizing: border-box;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: auto
+  grid-template-columns: auto;
+  box-sizing: border-box;
+  margin: 14% 8%;
+}
+
+[class*="card-"] {
+  border-radius: 10px;
+  padding: 2% 10% 10% 10%;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.card-1 {
+  grid-row: 1/4;
+  background-color: var(--moderate-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position:190px 1px;
+}
+
+.student-name  {
+  line-height: 0.3;
+  color: var(--white);
+  margin: 10px;
+  font-weight: 600;
+}
+
+.student-name p:last-child {
+  color: var(--white);
+  opacity: 50%;
+}
+.student-info {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.round-image {
+  border-radius: 50%;
+  width: 30px;
+  margin-top: 10px;
+}
+
+.full-testimonial {
+  opacity: 70%;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.card-2 {
+  grid-row: 4/5;
+  background-color: var(--very-dark-grayish-blue);
+
+}
+.card-3 {
+  grid-row: 5/6;
+  background-color: var(--white);
+
+}
+.card-4 {
+  grid-row:6/7;
+  background-color: var(--very-dark-blackish-blue);
+}
+.card-5 {
+  grid-row: 7/9;
+  background-color: var(--white);
+}
+
+
+.card-3,
+.card-5 {
+  color: var(--very-dark-grayish-blue);
+}
+
+.card-3 .student-name p,
+.card-5 .student-name p
+ {
+  color: var(--very-dark-grayish-blue);
+}
+
+.description {
+  font-size: 1.5em;
+}
+
+
+@media (min-width: 768px) {
+
+  body{
+    box-sizing: border-box;
+  }
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 7%;
+    grid-gap: 30px;
+    justify-content: center;
+    grid-template-areas:
+    "g1 g1 g2 g5"
+    "g3 g4 g4 g5";
+  }
+  [class*="card-"] {
+  padding: 0.5em 2.5em 2em;
+  box-sizing: border-box;
+  box-shadow: 33px 38px 42px -21px rgba(0,0,0,0.13);
+  }
+  .card-1 {
+    grid-area: g1;
+    background-position: 350px 1px;
+  }
+  .card-2 {
+    grid-area: g2;
+  }
+  .card-3 {
+    grid-area: g3;
+  }
+  .card-4 {
+    grid-area: g4;
+  }
+  .card-5 {
+    grid-area: g5;
+  }
+
+
 }
